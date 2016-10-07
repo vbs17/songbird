@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8385632607328EB1147A4E5B /* Pods_Songbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FF5F385F0BBAA4A94FF9C6 /* Pods_Songbird.framework */; };
 		B0BCB44E1DA744EF00E13A1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCB44D1DA744EF00E13A1A /* AppDelegate.swift */; };
 		B0BCB4501DA744EF00E13A1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCB44F1DA744EF00E13A1A /* ViewController.swift */; };
 		B0BCB4531DA744EF00E13A1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BCB4511DA744EF00E13A1A /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		B0BCB4541DA744F000E13A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0BCB4571DA744F000E13A1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0BCB4591DA744F000E13A1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9FF5F385F0BBAA4A94FF9C6 /* Pods_Songbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Songbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C524E44A04CA073496D3726A /* Pods-Songbird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Songbird.release.xcconfig"; path = "Pods/Target Support Files/Pods-Songbird/Pods-Songbird.release.xcconfig"; sourceTree = "<group>"; };
+		FC6DACFCFEF7D628D615CD29 /* Pods-Songbird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Songbird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Songbird/Pods-Songbird.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8385632607328EB1147A4E5B /* Pods_Songbird.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AE3876FEAE349AB14D2219F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC6DACFCFEF7D628D615CD29 /* Pods-Songbird.debug.xcconfig */,
+				C524E44A04CA073496D3726A /* Pods-Songbird.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B0BCB4411DA744EF00E13A1A = {
 			isa = PBXGroup;
 			children = (
 				B0BCB44C1DA744EF00E13A1A /* Songbird */,
 				B0BCB44B1DA744EF00E13A1A /* Products */,
+				6AE3876FEAE349AB14D2219F /* Pods */,
+				C1DBD62DC20E697668C92943 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = Songbird;
 			sourceTree = "<group>";
 		};
+		C1DBD62DC20E697668C92943 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9FF5F385F0BBAA4A94FF9C6 /* Pods_Songbird.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0BCB45C1DA744F000E13A1A /* Build configuration list for PBXNativeTarget "Songbird" */;
 			buildPhases = (
+				19B65A0FB93D1488936CB0E5 /* [CP] Check Pods Manifest.lock */,
 				B0BCB4461DA744EF00E13A1A /* Sources */,
 				B0BCB4471DA744EF00E13A1A /* Frameworks */,
 				B0BCB4481DA744EF00E13A1A /* Resources */,
+				DB73A445DBCEDF8DAA68CD96 /* [CP] Embed Pods Frameworks */,
+				C1CC995E29CB8FF8DF2E451B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19B65A0FB93D1488936CB0E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1CC995E29CB8FF8DF2E451B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Songbird/Pods-Songbird-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB73A445DBCEDF8DAA68CD96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Songbird/Pods-Songbird-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B0BCB4461DA744EF00E13A1A /* Sources */ = {
@@ -248,6 +323,7 @@
 		};
 		B0BCB45D1DA744F000E13A1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC6DACFCFEF7D628D615CD29 /* Pods-Songbird.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Songbird/Info.plist;
@@ -259,6 +335,7 @@
 		};
 		B0BCB45E1DA744F000E13A1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C524E44A04CA073496D3726A /* Pods-Songbird.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Songbird/Info.plist;
@@ -287,6 +364,7 @@
 				B0BCB45E1DA744F000E13A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
