@@ -7,5 +7,8 @@ target 'Songbird' do
 
   # Pods for Songbird
   pod 'ESTabBarController'
+  pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

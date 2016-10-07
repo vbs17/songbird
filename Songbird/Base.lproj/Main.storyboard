@@ -35,13 +35,65 @@
                     <view key="view" contentMode="scaleToFill" id="Q8Z-NP-keV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuy-bX-lRt">
+                                <rect key="frame" x="38" y="100" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="psQ-1C-WNk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8RE-f0-Q0Y">
+                                <rect key="frame" x="38" y="140" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="VfK-ne-FYn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="アカウント作成時は表示名を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLt-Pa-oAl">
+                                <rect key="frame" x="38" y="180" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KhY-fx-2OQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FD-Pl-NEa">
+                                <rect key="frame" x="37" y="220" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="alf-c5-Idc"/>
+                                </constraints>
+                                <state key="normal" title="ログイン" backgroundImage="btn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iu2-hz-Md1">
+                                <rect key="frame" x="37" y="270" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FhD-Qg-zqL"/>
+                                </constraints>
+                                <state key="normal" title="アカウント作成" backgroundImage="btn"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Iu2-hz-Md1" firstAttribute="centerX" secondItem="Q8Z-NP-keV" secondAttribute="centerX" id="18Y-sX-5aA"/>
+                            <constraint firstItem="4FD-Pl-NEa" firstAttribute="centerX" secondItem="Q8Z-NP-keV" secondAttribute="centerX" id="JaP-j6-iSh"/>
+                            <constraint firstItem="kuy-bX-lRt" firstAttribute="centerX" secondItem="Q8Z-NP-keV" secondAttribute="centerX" id="WoJ-nE-PzX"/>
+                            <constraint firstItem="8RE-f0-Q0Y" firstAttribute="top" secondItem="kuy-bX-lRt" secondAttribute="bottom" constant="10" id="jOK-JF-Yvg"/>
+                            <constraint firstItem="YLt-Pa-oAl" firstAttribute="centerX" secondItem="Q8Z-NP-keV" secondAttribute="centerX" id="kOk-38-zBS"/>
+                            <constraint firstItem="8RE-f0-Q0Y" firstAttribute="centerX" secondItem="Q8Z-NP-keV" secondAttribute="centerX" id="lbB-eb-79J"/>
+                            <constraint firstItem="Iu2-hz-Md1" firstAttribute="top" secondItem="4FD-Pl-NEa" secondAttribute="bottom" constant="10" id="lbL-WZ-RDw"/>
+                            <constraint firstItem="kuy-bX-lRt" firstAttribute="top" secondItem="tZP-cj-ctt" secondAttribute="bottom" constant="80" id="p38-3n-9LJ"/>
+                            <constraint firstItem="YLt-Pa-oAl" firstAttribute="top" secondItem="8RE-f0-Q0Y" secondAttribute="bottom" constant="10" id="pXV-6y-grv"/>
+                            <constraint firstItem="4FD-Pl-NEa" firstAttribute="top" secondItem="YLt-Pa-oAl" secondAttribute="bottom" constant="10" id="u8c-aB-PAB"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEd-HE-hck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467.5" y="394.5"/>
+            <point key="canvasLocation" x="467.5" y="399.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="OQ6-Cg-1kg">
@@ -120,4 +172,7 @@
             <point key="canvasLocation" x="2035.5" y="399.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn" width="300" height="40"/>
+    </resources>
 </document>
